@@ -1,0 +1,4 @@
+<!-- http://stackoverflow.com/questions/1105633/automatic-image-resizing-in-a-css-flow-layout-to-simulate-a-html-table-layout -->
+<div class="imgbox" >
+  <img class="test" src="Img 1.jpg" style="width:50%"/>
+</div>

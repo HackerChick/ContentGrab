@@ -1,0 +1,13 @@
+<html>
+<head>
+   <script type="text/javascript" src="jquery-1.5.1.min.js"></script>
+
+   <script>
+	  $(window).resize(function() {
+		  $('body').prepend('<div>' + $(window).width() + '</div>');
+	  });
+  </script>
+  <body>
+Each time you resize this will add the width
+  </body>
+</html>

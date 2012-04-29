@@ -1,0 +1,32 @@
+ul.column{
+	width: 100%;
+	padding: 0;
+	margin: 10px 0;
+	list-style: none;
+}
+ul.column li {
+	float: left;
+	width: 200px; /*Set default width*/
+	padding: 0;
+	margin: 5px 0;
+	display: inline;
+}
+.block {
+	height: 355px;
+	font-size: 1em;
+	margin-right: 10px; /*Creates the 10px gap between each column*/
+	padding: 20px;
+	background: #e3e1d5;
+}
+.block h2 {
+	font-size: 1.8em;
+}
+.block img {
+        /*Flexible image size with border*/
+	width: 89%;  /*Took 1% off of the width to prevent IE6 bug*/
+	padding: 5%;
+	background:#fff;
+	margin: 0 auto;
+	display: block;
+	-ms-interpolation-mode: bicubic; /*prevents image pixelation for IE 6/7 */
+}

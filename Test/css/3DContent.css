@@ -1,0 +1,126 @@
+@import url("ui-lightness/jquery-ui-1.8.12.custom.css");
+
+html, body {
+   height:100%;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-size: 10px;
+	font-family:  Arial, Verdana, Helvetica, sans-serif;
+	line-height: 1.8em;
+	background: #695e53;
+}
+
+img {border: none;}
+a {color: #423b35;}
+* {margin: 0; padding: 0;}
+
+h1,h2{ font-weight: normal; margin: 10px 0; padding: 10px 0; }
+h1 {
+	font-size: 4em;
+	padding: 15px 5%;
+	margin: 0 auto;
+	background: #2b221b;
+	line-height:1em;
+	color: #e3e1d5;
+	border-bottom: 1px solid #1b140e;
+}
+
+.header{
+	left:0;
+	position:fixed;
+	width:100%;
+	top:0;		
+}
+
+.navlinks {
+    background: #695e53;
+	text-align:center;
+	font-size: 11px;
+	color: #e3e1d5;
+}
+.navlinks a{
+	color: #e3e1d5;
+}
+
+.container {
+	padding: 105px 3% 5px 5%;
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	margin: 0 auto -250px auto;	// height of picklist
+}
+
+.picklist, .push {
+    height: 250px;
+	clear: both;
+}
+
+.picklist{
+	border-style:groove;
+	border-width:2px;
+	border-color:#e3e1d5;
+	background: #2b221b;
+}
+
+.grid li {
+	list-style: none outside;
+	float: left;
+	margin-right: 10px;
+	margin-bottom:10px;
+	font-size: 50px;
+	width: 3.5em;
+	height: 5em;
+	text-align: center;
+	background: #e3e1d5;
+	-moz-border-radius: 3px;
+	-khtml-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-ms-interpolation-mode: bicubic;
+	display: block;
+}
+
+.grid li img {
+	vertical-align: middle;
+}
+
+#picklist-grid{
+	font-size:10px;
+}
+
+.block {
+	font-size: 26%;
+	line-height: 120%;
+	margin-right: 10px;
+	padding: 0px;
+	width: 100%
+}
+.block h2 {
+	font-size: 100%;
+	padding: 0px;
+	margin: 0px;
+	font-weight: bold;
+	white-space:nowrap;
+}
+.block img {
+	padding: 2%;
+	margin: 0 0 2% 0;
+	height: 68%;
+	width: 96%;
+	vertical-align: center;
+	background:#fff;
+	-moz-border-radius: 3px;
+	-khtml-border-radius: 3px;
+	-webkit-border-radius: 3px;
+}
+
+.tags{
+	font-size: 85%;
+}
+
+.options{
+	padding-top: 2%;
+	font-size: 70%;
+}

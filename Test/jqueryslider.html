@@ -1,0 +1,125 @@
+ 
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"> 
+<head> 
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
+ 
+	<title>jQuery UI Slider Demo</title> 
+	<link type="text/css" href="jquery-ui-1.7.1.custom.css" rel="stylesheet" />	
+	<script type="text/javascript" src="jquery-1.5.1.min.js"></script> 
+	<script type="text/javascript" src="jquery-ui-1.8.12.custom.min.js"></script> 
+	<script type="text/javascript"> 
+	
+ 
+		var slide_int = null;
+		
+		$(function(){
+			
+			$("h4.code").click(function () {
+				$("div#info").toggle("slow");
+			});
+			
+			$('#slider').slider({
+				step: 10,
+				min: 50,
+				max: 500,
+				start: function(event, ui){
+					$('#current_value').empty();
+					slide_int = setInterval(update_slider, 10);	
+				},
+				slide: function(event, ui){
+					setTimeout(update_slider, 10);  
+				},
+				stop: function(event, ui){
+					clearInterval(slide_int);
+				    slide_int = null;
+				}
+			});	
+		});
+		function update_slider(){
+		    var offset = $('.ui-slider-handle').offset();
+		    var value = $('#slider').slider('option', 'value');
+ 
+		    $('#current_value').text('Value is '+value).css({top:offset.top });
+		    $('#current_value').fadeIn();
+ 
+		}
+	</script> 
+	<style type="text/css"> 
+		#wrap{
+			font-family:"Lucida Grande", Arial;
+			width:800px;
+			margin:100px auto;
+		}
+		a:link,a:visited{
+			color:#202020;
+			text-decoration:none;
+		}
+		a:hover{
+			background-color:#FFF2D5;
+ 		}
+		h2,h3{margin:2px 0;}
+		#slider{
+			height:300px;
+			margin:50px 0;
+		}
+		#current_value{
+			position:absolute;
+			margin:0 0 0 35px;
+			background-color:#FFF2D5;
+			padding:4px;
+		}
+		#info{
+			margin:10px 0 0 0;
+			display:none;
+			background-color:#FFF9EB;
+			padding:8px;
+		}
+	
+	</style> 
+</head> 
+ 
+<body> 
+	<div id="wrap"> 
+		<h2>Interactive jQuery UI Slider Example</h2> 
+		<h3>Move the slider around and check out the values</h3> 
+		<!--<h3>Written by: <a href="http://www.ryancoughlin.com" target="_blank">Ryan Coughlin</a> with the help of the users at stackoverflow.com</h3> --> 
+		<h4 class="code">View Source</h4> 
+		<div id="info"> 
+			<pre> 
+$(function(){
+	var slide_int = null;
+ 
+	function update_slider(){
+		var offset = $('.ui-slider-handle').offset();
+		var value = $('#slider').slider('option', 'value');
+		$('#current_value').text('Value is '+value).animate({top:offset.top }, 1000 )
+		$('#current_value').fadeIn();
+	}
+ 
+	$('#slider').slider({
+		animate: true,
+		step: 1,
+		min: 1,
+		orientation: 'vertical',
+		max: 10,
+		start: function(event, ui){
+		$('#current_value').empty();
+			slide_int = setInterval(update_slider, 10);	
+		},
+		slide: function(event, ui){
+			setTimeout(update_slider, 10);  
+		},
+		stop: function(event, ui){
+			clearInterval(slide_int);
+			slide_int = null;
+		}
+	});	
+});
+		</pre> 
+		</div> 
+		<div id="slider"></div> 
+		<div id="current_value"></div> 
+		<p></p> 
+	</div> 
+</body> 
+</html> 
