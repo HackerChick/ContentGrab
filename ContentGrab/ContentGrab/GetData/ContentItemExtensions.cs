@@ -88,7 +88,7 @@ namespace ContentGrab.GetData
             string imageURL = source.GetTextBetween("\"", "\"wishPic\"", "src", "\"");
             if (imageURL != null)
             {
-
+                imageURL = imageURL.FormProperURL();
                 var extension = ".jpg"; // default
                 int indexOfExtension = imageURL.LastIndexOf(".");
                 if (indexOfExtension > 0) extension = imageURL.Substring(indexOfExtension);

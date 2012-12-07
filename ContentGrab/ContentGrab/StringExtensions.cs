@@ -48,6 +48,16 @@ namespace ContentGrab
             return Regex.Replace(fileName, @"[^\w\.@-]", "");
         }
 
+        public static string FormProperURL( this string url )
+        {
+            if (!url.StartsWith("http:"))
+            {
+                if (url.StartsWith("//")) url = "http:" + url;
+                else url = "http://" + url;
+            }
+            return url;
+        }
+
         private static void WriteToFile(this string content, string fileName)
         {
             var sw = new StreamWriter(fileName);
