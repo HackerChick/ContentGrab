@@ -44,6 +44,7 @@ namespace ContentGrab
             // Will leave: alpha, period, @ symbol, and hyphen
             string fileName = Regex.Replace(source, @": ", "-");
             fileName = Regex.Replace(fileName, @":", "-");
+            fileName = Regex.Replace(fileName, @"'", "");
             return Regex.Replace(fileName, @"[^\w\.@-]", "");
         }
 
