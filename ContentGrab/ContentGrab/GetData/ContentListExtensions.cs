@@ -24,7 +24,7 @@ namespace ContentGrab.GetData
         public static void SetURL(this ContentList contentList, string source)
         {
             // <a href="/my/list.aspx?list=394150" class="image handleError"
-            contentList.URL = "http://wishpot.com" + source.GetTextBetween("\"", "<a href", "\"");
+            contentList.URL = "http://www.wishpot.com" + source.GetTextBetween("\"", "<a href", "\"") + "&uid=227540";
         }
     }
 }
